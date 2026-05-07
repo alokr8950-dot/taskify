@@ -1,11 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const API_URL =
-  import.meta.env.VITE_APP_BASE_URL ||
-  "https://taskify-dqw8.onrender.com";
-
 const baseQuery = fetchBaseQuery({
-  baseUrl: API_URL,
+  baseUrl: "https://taskify-dqw8.onrender.com",
   credentials: "include",
 });
 
