@@ -17,12 +17,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "http://localhost:3001",
-      "https://taskify-zeta-eight.vercel.app",
-    ],
-    methods: ["GET", "POST", "DELETE", "PUT"],
+    origin: true,
     credentials: true,
   })
 );
@@ -33,6 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.use(morgan("dev"));
+
 app.use("/api", routes);
 
 app.use(routeNotFound);
