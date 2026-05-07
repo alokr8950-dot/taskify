@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const API_URL =
   import.meta.env.VITE_APP_BASE_URL ||
-  "https://taskify-production-5f8e.up.railway.app";
+  "https://taskify-dqw8.onrender.com";
 
 const baseQuery = fetchBaseQuery({
   baseUrl: API_URL,
