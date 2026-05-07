@@ -1,10 +1,12 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const API_URL = "http://localhost:5000"; // 🔥 FIX
+const API_URL =
+  import.meta.env.VITE_APP_BASE_URL || 
+  "https://taskify-production-9679.up.railway.app";
 
 const baseQuery = fetchBaseQuery({
   baseUrl: API_URL,
-  credentials: "include", // 🔥 important for cookies
+  credentials: "include",
 });
 
 export const apiSlice = createApi({
